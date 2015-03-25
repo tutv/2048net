@@ -23,7 +23,9 @@ public class BoxNumber extends JLabel{
     }
 
     public void setText(int value) {
-        super.setText(Integer.toString(value));
+        if (value > 0) {
+            super.setText(Integer.toString(value));
+        }
         updateBackGround(value);
         updateFontColor(value);
     }
