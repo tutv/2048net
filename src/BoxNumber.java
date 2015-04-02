@@ -15,7 +15,6 @@ public class BoxNumber extends JLabel{
         setSize(120, 120);
 
         setOpaque(true);
-        Border padding = BorderFactory.createEmptyBorder(0, 0, 0, 0);
         Border border = BorderFactory.createLineBorder(new Color(187, 173, 160), 5);
         setBorder(border);
 
@@ -25,6 +24,9 @@ public class BoxNumber extends JLabel{
     public void setText(int value) {
         if (value > 0) {
             super.setText(Integer.toString(value));
+        }
+        else {
+            super.setText("");
         }
         updateBackGround(value);
         updateFontColor(value);
